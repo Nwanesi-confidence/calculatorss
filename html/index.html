@@ -10,38 +10,38 @@
     <div class="calculator-container">
         <div class="enclosure">
             <header class="display">
-                <span class="item-display"></span>
+                <input class="item-display" type="text" name="display" id="result" readonly >
             </header>
     
             <div class="button-container" >
-               <div class="first-row-buttons">
-                <input class="shadow" type="button" value="7">
-                <input type="button" value="8">
-                <input type="button" value="9">
-                <input type="button" value="X">
+               <div class="row-buttons">
+                <input type="button" value="7" onclick="display_keys(7)">
+                <input type="button" value="8" onclick="display_keys(8)">
+                <input type="button" value="9" onclick="display_keys(9)">
+                <input type="button" value="*" onclick="display_keys('*')">
                </div> 
-               <div class="first-row-buttons">
-                <input type="button" value="4">
-                <input type="button" value="5">
-                <input type="button" value="6">
-                <input type="button" value="-">
+               <div class="row-buttons">
+                <input type="button" value="4" onclick="display_keys(4)">
+                <input type="button" value="5" onclick="display_keys(5)">
+                <input type="button" value="6" onclick="display_keys(6)">
+                <input type="button" value="-" onclick="display_keys('-')">
                </div> 
-               <div class="first-row-buttons">
-                <input type="button" value="1">
-                <input type="button" value="2">
-                <input type="button" value="3">
-                <input type="button" value="+">
+               <div class="row-buttons">
+                <input type="button" value="1" onclick="display_keys(1)">
+                <input type="button" value="2" onclick="display_keys(2)">
+                <input type="button" value="3" onclick="display_keys(3)">
+                <input type="button" value="+" onclick="display_keys('+')">
                </div> 
-               <div class="first-row-buttons">
-                <input type="button" value="+/-">
+               <div class="row-buttons">
+                <input type="button" value="CLEAR" onclick="result.value=''" id="clear-button">
                 <input type="button" value="0">
                 <input type="button" value=".">
-                <input id="special-color" type="button" value="=">
+                <input id="special-color" type="button" value="=" onclick="calculate(result.value)">
                </div> 
             </div>
         </div>
         
     </div>
-    
+    <script src="/javascript files/function.js"></script>
 </body>
 </html>
